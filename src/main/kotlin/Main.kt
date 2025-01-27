@@ -1,16 +1,20 @@
-package org.example
+data class Time(val hour: Int, val minute: Int)
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+fun formatTime(hour: Int, minute: Int): String {
+    require(hour in 0..23) { "Hour must be between 0 and 23" }
+    require(minute in 0..59) { "Minute must be between 0 and 59" }
+    return String.format( "%02d:%02d", hour, minute)
+}
+
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+    val person = "Юрий Гагарин"
+    val year = 1961
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
-    }
+    val launchTime = Time(9, 7)
+    val landingTime = Time(10, 55)
+
+    println("$person совершил полет в космос")
+    println("Год полета: $year")
+    println("Время взлета: ${formatTime(launchTime.hour, launchTime.minute)}")
+    println("Время посадки: ${formatTime(landingTime.hour, landingTime.minute)}")
 }
