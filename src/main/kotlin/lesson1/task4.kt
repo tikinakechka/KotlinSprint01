@@ -16,7 +16,7 @@ fun main() {
     println("Время взлета: ${formatTime(launchTime)}")
     println("Время посадки: ${formatTime(landingTime)}")
 
-    val length = 40_868_600_000 // Расстояние (мм)
+    val length = 40_868_600_000 // мм расстояние
     val age = 27 // возраст
     val partOfDay = 0.075 // часть дня
     val seconds: Short = 6480 // секунд провел
