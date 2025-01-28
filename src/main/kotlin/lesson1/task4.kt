@@ -1,27 +1,10 @@
-package lesson1
-
-data class Time(val hour: Int, val minute: Int)
-
-private fun formatTime(time: Time): String = "${time.hour}:${time.minute}"
-
 fun main() {
-    val person = "Юрий Гагарин"
-    val year = 1961
-
-    val launchTime = Time(9, 7)
-    val landingTime = Time(10, 55)
-
-    println("$person совершил полет в космос")
-    println("Год полета: $year")
-    println("Время взлета: ${formatTime(launchTime)}")
-    println("Время посадки: ${formatTime(landingTime)}")
-
-    val length = 40_868_600_000 // мм расстояние
-    val age = 27 // возраст
-    val partOfDay = 0.075 // часть дня
+    val length: Long  = 40_868_600_000 // мм расстояние
+    val age: Int = 27 // возраст
+    val partOfDay: Double = 0.075 // часть дня
     val seconds: Short = 6480 // секунд провел
-    val partOfYear = 2.0547945205479453E-4 // часть года
-    val apogee = 327_000 // м апогей орбиты
+    val partOfYear: Double = 2.0547945205479453E-4 // часть года
+    val apogee: Int = 327_000 // м апогей орбиты
 
     println("Расстояние: $length мм")
     println("Возраст: $age лет")
