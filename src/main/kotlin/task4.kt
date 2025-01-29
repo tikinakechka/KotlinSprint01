@@ -10,7 +10,6 @@ fun main() {
     val crystals = 7 // Добыто кристаллов
     val iron = 11    // Добыто железа
 
-    // бонусные ресурсы
     val bonusCrystals = applyBuff(crystals, 20)
     val bonusIron = applyBuff(iron, 20)
 
